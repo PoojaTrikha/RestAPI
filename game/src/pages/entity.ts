@@ -13,7 +13,7 @@ export default class Page extends BaseEntity {
   @Column('text', {nullable: true})
   color: string
   
-//  @Column('jason', {nullable: true})
-//  board: jason
+  @Column('json', {nullable: true, default: [['o','o','o'],['o','o','o'],['o','o','o']]})
+  board: string[][]
 
 }
