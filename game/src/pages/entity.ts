@@ -8,10 +8,12 @@ export default class Page extends BaseEntity {
   id?: number
 
   @Column('text', {nullable:false})
-  title: string
+  name: string
 
   @Column('text', {nullable: true})
-  content: string
-
+  color: string
+  
+//  @Column('jason', {nullable: true})
+//  board: jason
 
 }
