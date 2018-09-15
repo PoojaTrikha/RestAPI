@@ -1,6 +1,14 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
 import { BaseEntity } from 'typeorm/repository/BaseEntity'
 
+export const Colors = ['red', 'blue', 'green', 'yellow', 'magenta']
+
+export const defaultBoard = [
+  ['o', 'o', 'o'],
+  ['o', 'o', 'o'],
+  ['o', 'o', 'o']
+]
+
 @Entity()
 export default class Page extends BaseEntity {
 
@@ -10,10 +18,10 @@ export default class Page extends BaseEntity {
   @Column('text', {nullable:false})
   name: string
 
-  @Column('text', {nullable: true})
+  @Column('text', {nullable: false})
   color: string
   
-  @Column('json', {nullable: true, default: [['o','o','o'],['o','o','o'],['o','o','o']]})
+  @Column('json', {nullable: false})
   board: string[][]
 
 }

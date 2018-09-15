@@ -5,6 +5,7 @@ const routing_controllers_1 = require("routing-controllers");
 const controller_1 = require("./pages/controller");
 const db_1 = require("./db");
 const app = routing_controllers_1.createKoaServer({
+    cors: true,
     controllers: [
         controller_1.default
     ]

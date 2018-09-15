@@ -1,24 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const defaultBoard = [['o', 'o', 'o'], ['o', 'o', 'o'], ['o', 'o', 'o']];
 const pagesById = {
     1: {
         id: 1,
-        title: 'Homepage',
-        content: `<h1>Homepage</h1>`
-            + `This is the homepage, and everything starts with a <strong>home</strong>page.`
+        name: 'first game',
+        color: 'green',
+        board: defaultBoard
     },
     2: {
-        id: 2,
-        title: 'Links',
-        content: `<h1>Links</h1>`
-            + `Here's where we will give you <i>links</i> to other pages.`
+        id: 1,
+        name: 'second game',
+        color: 'blue',
+        board: defaultBoard
     },
     3: {
-        id: 3,
-        title: 'Social media',
-        content: `<h1>Social media</h1>`
-            + `This is where you'll find links to our social media thing. Find us on Insta!`
+        id: 1,
+        name: 'third game',
+        color: 'yellow',
+        board: defaultBoard
     }
 };
 exports.default = pagesById;
-//# sourceMappingURL=data.js.map

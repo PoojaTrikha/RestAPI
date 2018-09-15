@@ -20,11 +20,15 @@ __decorate([
 __decorate([
     typeorm_1.Column('text', { nullable: false }),
     __metadata("design:type", String)
-], Page.prototype, "title", void 0);
+], Page.prototype, "name", void 0);
 __decorate([
     typeorm_1.Column('text', { nullable: true }),
     __metadata("design:type", String)
-], Page.prototype, "content", void 0);
+], Page.prototype, "color", void 0);
+__decorate([
+    typeorm_1.Column('json', { nullable: true, default: [['o', 'o', 'o'], ['o', 'o', 'o'], ['o', 'o', 'o']] }),
+    __metadata("design:type", Array)
+], Page.prototype, "board", void 0);
 Page = __decorate([
     typeorm_1.Entity()
 ], Page);
