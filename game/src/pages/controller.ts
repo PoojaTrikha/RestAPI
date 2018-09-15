@@ -32,8 +32,8 @@ export default class PageController {
 
         if(update.board !== undefined) {
             const numberOfMoves = moves(page.board, update.board)
-            if(numberOfMoves === 0) throw new BadRequestError('There is no move provided!')
-            if(numberOfMoves !== 1) throw new BadRequestError('Only one moved is allowed!')
+            if (update.board &&  numberOfMoves!==1) throw new BadRequestError('Only one moved please')
+            if(update.board && numberOfMoves === 0) throw new BadRequestError('No move is yet provided')
         }
            
         return Page.merge(page, update).save()
